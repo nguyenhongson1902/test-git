@@ -1,0 +1,8 @@
+CREATE CONSTRAINT ON
+
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM
+'file:////home/sonnh/Downloads/Telegram%20Desktop/100000.csv' AS line
+WITH line.`id` AS id
+LIMIT 1
+RETURN id
